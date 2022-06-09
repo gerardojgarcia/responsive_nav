@@ -120,12 +120,14 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 })({"main.js":[function(require,module,exports) {
 var hamBtn = document.querySelector('.hamburger');
 var navLinks = document.querySelector('.nav-links');
-var mobileMenu = document.querySelector('.mobile-menu');
+var mobileMenu = document.querySelector('.mobile-menu'); // Open Mobile Menu on Nav Click
+
 hamBtn.addEventListener('click', function () {
   hamBtn.classList.toggle('open');
   mobileMenu.classList.toggle('display');
   mobileMenu.classList.toggle('opacity');
-});
+}); // CLose mobile Menu on Mobile Link CLick
+
 var mobileLinks = document.querySelectorAll('.nav-mobile-item');
 var mobileLength = mobileLinks.length;
 
