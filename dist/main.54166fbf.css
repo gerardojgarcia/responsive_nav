@@ -66,10 +66,15 @@ body {
 header {
   display: flex;
   flex-flow: row nowrap;
-  width: auto;
+  width: 100%;
   background-color: white;
   align-items: center;
   justify-content: center;
+}
+@media screen and (max-width: 800px) {
+  header {
+    height: 100px;
+  }
 }
 
 nav {
@@ -78,8 +83,8 @@ nav {
   width: 100%;
   color: black;
   text-transform: uppercase;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   align-items: center;
   justify-content: space-between;
 }
@@ -90,7 +95,8 @@ nav .logo {
 nav .nav-links {
   width: auto;
   display: flex;
-  margin-right: 15vh;
+  margin: 0 auto;
+  margin-right: 5vh;
 }
 @media screen and (max-width: 800px) {
   nav .nav-links {
@@ -111,14 +117,14 @@ nav .nav-item:hover {
 
 .hamburger {
   display: none;
-  min-width: 24px;
+  width: 24px;
   height: 24px;
-  margin-right: 25px;
   border: none;
   box-sizing: border-box;
   background-color: white;
   position: relative;
   cursor: pointer;
+  transition: all 500ms;
 }
 .hamburger .hamburger-top, .hamburger .hamburger-middle, .hamburger .hamburger-bottom {
   position: absolute;
@@ -131,10 +137,10 @@ nav .nav-item:hover {
   transition: all 500ms ease-in-out;
 }
 .hamburger .hamburger-middle {
-  transform: translateY(8px);
+  transform: translateY(7px);
 }
 .hamburger .hamburger-bottom {
-  transform: translateY(16px);
+  transform: translateY(14px);
 }
 @media screen and (max-width: 800px) {
   .hamburger {
@@ -144,6 +150,7 @@ nav .nav-item:hover {
 
 .mobile-menu {
   display: none;
+  opacity: 0;
   flex-flow: column nowrap;
   justify-self: flex-end;
   align-items: center;
@@ -155,7 +162,7 @@ nav .nav-item:hover {
   padding-right: 10px;
   padding-bottom: 10px;
   position: absolute;
-  transition: 500ms;
+  transition: 500ms ease-in-out;
   background-color: white;
 }
 .mobile-menu a {
@@ -182,7 +189,7 @@ nav .nav-item:hover {
 }
 
 .open .hamburger-top {
-  transform: rotate(45deg) translateY(6px) translate(6px);
+  transform: rotate(45deg) translateY(5px) translate(5px);
 }
 
 .open .hamburger-middle {
@@ -190,11 +197,15 @@ nav .nav-item:hover {
 }
 
 .open .hamburger-bottom {
-  transform: rotate(-45deg) translateY(6px) translate(-6px);
+  transform: rotate(-45deg) translateY(5px) translate(-5px);
 }
 
 .display {
   display: flex;
+}
+
+.opacity {
+  opacity: 1;
 }
 
 /*# sourceMappingURL=/main.54166fbf.css.map */
